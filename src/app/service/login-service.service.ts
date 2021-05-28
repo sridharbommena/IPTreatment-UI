@@ -18,7 +18,7 @@ export class LoginServiceService {
   loginUser(token)
   {
     sessionStorage.setItem("token",token);
-    console.log(token);
+    // console.log(token);
     return true;
   }
 

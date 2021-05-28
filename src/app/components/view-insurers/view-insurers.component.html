@@ -1,0 +1,27 @@
+<input type="button" (click)="getInsurerDetail()" value="Get All Insurer Detail" />
+
+
+<div class="row justify-content-center">
+    <div class="col-auto">
+        <table *ngIf="insurers.length > 0" class="table table-bordered table-responsive">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Insurer Name</th>
+                <th scope="col">Insurer Package Name</th>
+                <th scope="col">Package Limit</th>
+                <th scope="col">Disbursement Duration</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let insurer of insurers">
+                  <td>{{insurer.id}}</td>
+                  <td>{{insurer.insurerName}}</td>
+                  <td>{{insurer.insurerPackageName}}</td>
+                  <td>{{insurer.insurerPackageAmountLimit}}</td>
+                  <td>{{insurer.disbursementDuration}}</td>
+              </tr>
+            </tbody>
+        </table>
+    </div>
+  </div>
