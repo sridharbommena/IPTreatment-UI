@@ -24,7 +24,6 @@ export class ViewInsurersComponent implements OnInit {
         this.insurers = success;
       },
       (error)=>{
-        console.log("error");
         console.log(error);
       });
 

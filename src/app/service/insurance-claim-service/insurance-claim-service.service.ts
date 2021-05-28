@@ -17,4 +17,9 @@ export class InsuranceClaimServiceService {
     return this.http.get<InsurerDetail[]>("http://localhost:8500/portal/getAllInsurerDetail");
   }
 
+  getInsurerNames():Observable<string[]>
+  {
+    return this.http.get<string[]>("http://localhost:8500/portal/getAllInsurers");
+  }
+
 }

@@ -1,1 +1,9 @@
-<input type="button" value="Show InsurerNames(dropdown)" (click)="getInsurerNames()" />
+<div>
+    <input type="button" value="Show InsurerNames(dropdown)" (click)="getInsurerNames()" />
+
+    <select *ngIf="insurerNames.length > 0" >
+        <option *ngFor="let name of insurerNames">{{name}}</option>
+    </select>
+
+
+</div>
